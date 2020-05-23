@@ -1,7 +1,7 @@
 package com.sire.algorithm;
 
-import com.sire.algorithm.integer.BitCount;
-import com.sire.algorithm.integer.DoublePower;
+import com.sire.algorithm.dataAl.stack.Calculate;
+import com.sire.algorithm.graph.EightQueens;
 
 /**
  * ==================================================
@@ -13,7 +13,7 @@ import com.sire.algorithm.integer.DoublePower;
  */
 public class SwordProblem {
     public static void main(String[] args){
-        IAlgorithm algorithm = new DoublePower();
+        IAlgorithm algorithm = new EightQueens();
         algorithm.go();
     }
 }

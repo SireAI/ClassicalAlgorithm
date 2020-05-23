@@ -15,10 +15,11 @@ public class RotateArray implements IAlgorithm {
     @Override
     public void go() {
         int minInRotateArray = findMinInRotateArray(new int[]{3, 4, 5,6, 1, 2});
-    System.out.println("=====>"+minInRotateArray);
+        System.out.println("=====>"+minInRotateArray);
     }
 
     /**
+     * 部分有序的二分法，时间复杂度log2n
      * 如果是一个递增数组，找到最小值很容易，第一个元素就是
      * 旋转数组可以看做是两个有序数组放在一个数组里，部分有序
      * 旋转数组的特点：
@@ -39,9 +40,11 @@ public class RotateArray implements IAlgorithm {
       int start = array[low];
       while (low<high){
           int mid = low+(high-low)/2;
+          //正确的元素，比相邻左边元素小
           if(array[mid]<=array[mid-1]){
               return array[mid];
           }else {
+              //缩小区域
               if(array[mid]>start){
                   low  = mid+1;
               }else {

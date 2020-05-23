@@ -28,8 +28,10 @@ public class TewDementionalFinerNumber implements IAlgorithm {
      * @return
      */
     private boolean findNumber(int[][] array,int number){
+        //确定两个索引
         int right = array.length-1;
         int top = 0;
+        //确定索引的终止条件
         while (right>=0 && top<=array[0].length-1){
             int rtNumber = array[right][top];
             if(rtNumber<number){
