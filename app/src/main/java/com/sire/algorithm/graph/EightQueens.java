@@ -27,6 +27,8 @@ public class EightQueens implements IAlgorithm {
 
     /**
      * 按照行递增的规律来搜索结果，避免重复
+     * 分为8个阶段，即为寻找一个满意的结果需要8步，上一步成功
+     * 才能进行下一步
      */
     public void cal8Quenes(int row){
         if(row == 8){

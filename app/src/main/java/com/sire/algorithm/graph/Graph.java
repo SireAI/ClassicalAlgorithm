@@ -11,6 +11,8 @@ import java.util.Stack;
  * Author:Sire
  * Description:使用邻接表表示图结构，数组+链表(其他动态数据结构，红黑树，跳表)
  * 该类描述的是无向图
+ * 解决局部顺序推导全局顺序问题
+ * 依赖任务
  * ==================================================
  */
 public class Graph {
@@ -60,7 +62,7 @@ public class Graph {
             //遍历这个点的所有直接相邻点
             LinkedList<Integer> points = graph[p];
             for (int i = 0; i < points.size(); i++) {
-                //若该店没有没有访问过，则进行处理
+                //若该点没有没有访问过，则进行处理
                 if(!visited[points.get(i)]){
                     //记录路径
                    path[points.get(i)] = p;
